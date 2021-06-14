@@ -1,9 +1,9 @@
 //getting high score
-const highScoresList = document.getElementById("highScoresList");
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const topScoresList = document.getElementById("topScoresList");
+const topScores = JSON.parse(localStorage.getItem("topScores")) || [];
 
-highScoresList.innerHTML = highScores
+topScoresList.innerHTML = topScores
   .map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    return `<li class="top-score">${score.name} - ${score.score}</li>`;
   })
   .join("");
